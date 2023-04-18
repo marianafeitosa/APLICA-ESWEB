@@ -9,11 +9,11 @@
   <body>
     <h1>Batalha Harry Styles X Taylor Swift</h1>
     <?php
-        $votos = array("Harry Styles" => 0, "Taylor Swift" => 0); // Array que armazena os votos
+        $votos = array("Harry Styles" => 0, "Taylor Swift" => 0); 
         if(isset($_POST['submit'])){
             $nome = $_POST['nome'];
             $voto = $_POST['cantor'];
-            $votos[$voto]++; // Incrementa o voto para o cantor escolhido
+            $votos[$voto]++; 
             echo "<h3> Nós agradecemos seu voto, $nome! </h3>";
             $arquivo = fopen("dados.txt", "a");
             fwrite($arquivo, "Nome: $nome | Voto: $voto \n");
